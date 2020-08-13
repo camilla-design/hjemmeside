@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: black;
+    min-height: 20vh;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .logo img {
+      width: 50px;
+      margin: 20px;
+  }
+  /*NAVIGATION*/
+  #menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px;
+    cursor: pointer;
+}
+.menu-bar {
+    background-color: #08FFE3;
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s ease;
+       
+}
+#menu1 {
+    transform: translateY(-4px);
+}
+#menu3 {
+    transform: translateY(4px);
+}
+.navigation li a{
+	color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.navigation li a:hover{
+    color: #08FFE3;
+}
+.navigation li{
+	list-style: none;
+	padding: 16px 0;
+}
+.navigation{
+	padding: 0;
+	margin: 0 20px;
+	transition: 0.3s ease;
+	display: none;
+}
+.navigation .active {
+    color: #08FFE3;
+}
+.menu-background, #nav-menu{
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+.menu-background {
+	z-index: 1;
+	width: 0;
+	height: 0;
+	background: radial-gradient(circle,black,black);
+	border-radius: 50%;
+    transition: 0.3s ease;
+}
+#nav-menu{
+	z-index: 2;	
+}
+.change-bg{
+	width: 500px;
+	height: 500px;
+    transform: translate(50%,-10%);
+}
+.change .menu-bar{
+	background-color: #08FFE3;
+}
+.change #menu1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #menu2{
+	transform: translateY(-4px) rotate(45deg);
+}
+.change #menu3{
+	opacity: 0;
+}
+.change{
+	display: block;
+}
+
+/*ABOUT CONTENT HOMEPAGE*/
+.about-content-homepage {
+    width: 300px;
+    margin: 0 auto;
+}
+.info-content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.info-content h5 {
+    color: #08FFE3;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+.info-content p {
+    color: white;
+    margin-top: 18px;
+}
+.info-content i {
+    color: #08FFE3;
+    font-size: 35px;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.background-image {
+    width: 350px;
+    margin-top: 18px;
+}
+.background-image img {
+    width: 350px;
+    text-align: center;
+}
+
+.contact-homepage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+}
+.contact-homepage a {
+    color: white;
+    text-decoration: none;
+    margin-top: 18px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+}
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+}
+.contact-buttons a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+.contact-buttons .cv-btn {
+    color: #08FFE3;
+    padding: 8px;
+    margin-bottom: 18px;
+}
+
+/*PORTFOLIO PAGE*/
+.title-name {
+    color: #08FFE3;
+    text-transform: uppercase;
+    text-align: center;
+}
+.slideshow-container {
+    width: 300px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.portfolio {
+    text-align: center;
+}
+.portfolio img {
+    width: 300px;
+}
+.portfolio-text {
+    color: white;
+    margin-top: 18px;
+}
+.portfolio-text h6,
+.portfolio-text h4 {
+    text-transform: uppercase;
+    color: #08FFE3;
+}
+.portfolio-text h3 {
+    text-transform: uppercase;
+}
+.portfolio-text p {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+.portfolio-text a {
+    color: white;
+    text-decoration: none;
+}
+.portfolio-text a:hover {
+    color: #08FFE3;
+}
+
+/*SLIDESHOW*/
+.dot {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #08FFE3;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active-slide, .dot:hover {
+    background-color: white;
+  }
+  .slide {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: #08FFE3;
+  }
+
+  /*TESTEMONAIL PAGE*/
+  .testemonial-container {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 50px;
+  }
+  .testemonial-text i {
+      color: #08FFE3;
+      font-size: 20px;
+  }
+  .testemonial-text p {
+      color: white;
+  }
+  .testemonial-text a {
+      color: #08FFE3;
+      text-decoration: none;
+  }
+  .testemonial-text h3 {
+      color: white;
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 8px;
+  }
+  span {
+    font-weight: 300;
+  }
+
+  /*RESUME CONTAINER*/
+  .wrapper-cv {
+      width: 80%;
+      height: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+  }
+  .cv-information {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 30px;
+      background-color: #3a605b;
+      padding: 18px;
+  }
+  .cv-information img {
+      width: 200px;
+      
+  }
+  hr {
+      width: 250px;
+      margin: 0 auto;
+      border-top: 2px solid black;
+      margin-top: 30px;
+      
+  }
+  .cv-information h2 {
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      color: #08FFE3;
+  }
+  .cv-information p {
+      text-align: left;
+      margin-bottom: 8px;
+      color: white;
+  }
+  .cv-information span {
+      font-weight: 700;
+  }
+  .cv-experience {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 30px;
+  }
+  .cv-experience h1 {
+      color: #08FFE3;
+      text-transform: uppercase;
+      text-align: center;
+  }
+  .cv-experience h2 {
+      color: #08FFE3;
+      text-transform: uppercase;
+      margin-top: 18px;
+  }
+  .cv-experience p {
+      color: white;
+      margin-top: 18px;
+      font-weight: 300;
+  }
+  .cv-experience span {
+      font-weight: 400;
+  }
+  
+  
+
+@media screen and (min-device-width: 700px) {
+    body {
+        width: 700px;
+    }
+    #nav-menu {
+        position: fixed;
+        display: block;
+        top: 90px;
+        left: 10px;
+    }
+    .menu-bar {
+        display: none;
+    }
+    .navigation {
+        display: block;
+        overflow: hidden;
+        width: 200px;
+        line-height: 25px;
+        padding: 10px 0;
+        margin: 10px 0 0;
+    }
+    .menu-background {
+        display: none; 
+    }
+    .change {
+        display: none;
+    }
+
+    .navigation li {
+        display: inline-block;
+        vertical-align: top;
+        transform: translate(0,100%) rotate(-90deg);
+        transform-origin: 0 0;
+    }
+    .navigation li:after {
+        content: "";
+        float: left;
+        margin-top: 100%;
+    }
+    .navigation li a {
+        font-size: 30px;
+    }
+    .flex-contact-info {
+        display: flex;
+        width: 600px;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .about-content-homepage {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .info-content h1 {
+        font-size: 40px;
+    }
+    .info-content h5 {
+        font-size: 18px;
+    }
+    .slideshow-container {
+        width: 600px;
+        margin-right: 18px;
+    }
+    .wrapper-cv {
+        flex-direction: row;
+        width: 80%;
+        height: 700px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    
+    .cv-information {
+        width: 250px;
+    }
+    .cv-experience {
+        width: 250px;
+    }
+    hr {
+        width: 200px;
+    }
+    
+    
+    
+    
+}
+
+@media screen and (min-width: 1000px){
+    body {
+       width: 1200px; 
+       border: 1px solid #08FFE3;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 50px;
+        max-width: 1200px;
+    }
+    .about-content-homepage {
+        display: flex;
+        width: 800px;
+    }
+    .navigation li a {
+        font-size: 20px;
+    }
+    .navigation {
+        width: 100px;
+        
+    }
+    #nav-menu {
+        top: 30px;
+        left: 60px;
+    }
+    .flex-contact-info {
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .contact-homepage {
+        flex-direction: row;
+        width: 400px;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 300px;
+    }
+    .contact-buttons .cv-btn {
+        padding: 0;
+    }
+    .contact-buttons a {
+        font-size: 20px;
+    }
+    .slideshow-container {
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 18px;
+        
+        
+    }
+    .portfolio img {
+        flex: 1;
+    }
+    .portfolio-text {
+        flex: 1;
+    }
+    .next {
+        right: 300px;
+    }
+    .prev, .next {
+        display: none;
+    }
+    .wrapper-cv {
+        width: 80%;
+        height: 400px;
+        margin: 0 auto;
+        border: 1px solid red;
+    }
+    
+    .cv-information {
+        width: 250px;
+    }
+    .cv-experience {
+        width: 300px;
+    }
+    hr {
+        width: 200px;
+    }
+    
+    
+    
+    
+    
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee54249b54.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portefølje</title>
+</head>
+<body>
+
+     <!-- START NAVIGATION-->
+     <div class="logo">
+        <img src="images/Untitled-1.png">
+    </div>
+
+    <div id="nav-menu">
+        <div id="menu" onclick="onClickMenu()">
+            <div id="menu1" class="menu-bar"></div>
+            <div id="menu2" class="menu-bar"></div>
+            <div id="menu3" class="menu-bar"></div>
+        </div>
+        <ul class="navigation" id="navigation">
+            <li class="menu-text"><a href="./index.html">Hjem</a></li>
+            <li class="menu-text"><a class="active" href="./portfolio.html">Portefølje</a></li>
+            <li class="menu-text"><a href="./testemonial.html">Uttalelser</a></li>
+            <li class="menu-text"><a href="./cv.html">CV</a></li>
+        </ul>
+    </div>
+    <div class="menu-background" id="menu-background">
+
+    </div>
+<!-- END NAVIGATION -->
+
+<div class="title-name">
+    <h2>Portefølje</h2>
+</div>
+
+<div class="slideshow-container">
+
+<div class="portfolio slide">
+    <img src="./portfolio-img/image-unicef.jpg">
+    <div class="portfolio-text">
+        <h3>Unicef</h3>
+        <h6>Semesterproject</h6>
+        <p>Build a UNICEF Mother's Day marketing campaign website.
+            The project exam should reflect the student's creative and technical knowledge and skills based
+            on the first semester curriculum. This includes design principles, project management,
+            communication technology, and developing with HTML/CSS.</p>
+            <h4>Karakter: A</h4>
+            <a href="">unicef</a>
+    </div>
+</div>
+
+<div class="portfolio slide">
+    <img src="./portfolio-img/spacex-image.jpg">
+    <div class="portfolio-text">
+        <h3>SpaceX</h3>
+        <h6>Examens oppgave</h6>
+        <p>Build a microsite for SpaceX or NASA. This should focus on space technology.
+            A microsite is a branded, self-contained site, usually on its own domain, with a single purpose and a limited number of pages. The purpose can be promotional or editorial, and be may linked to a specific event or period of time. A microsite is usually built as an addition to an existing brand website.</p>
+            <h4>Karakter: B</h4>
+            <a href="">Spacex</a>
+    </div>
+</div>
+
+<div class="portfolio slide">
+    <img src="./portfolio-img/recycle-image.jpg">
+    <div class="portfolio-text">
+        <h3>Re-cycle</h3>
+        <h6>Portfolio1</h6>
+        <p>Build an HTML website for a company called 'Re-cycle' that offer eco-friendly, guided cycling
+            tours of a town. Because their clients are travelling, it is very important that the website is
+            mobile responsive.
+            It should have 4 pages: home page, about us, contact us, and the list of routes/tours. Do not
+            use Bootstrap or another similar framework - we want to see your ability to create responsive
+            layouts using CSS.</p>
+            <h4>Karakter: A</h4>
+            <a href="">Recycle</a>
+    </div>
+</div>
+
+<div class="portfolio slide">
+    <img src="./portfolio-img/shadowball-image.jpg">
+    <div class="portfolio-text">
+        <h3>Shadowball</h3>
+        <h6>Portfolio2</h6>
+        <p>reate the final version of your Shadowball website. 4 Pages with click throughs to one product
+            detail page.
+
+            The click through must start on the homepage.
+
+            User clicks on banner/link/photo/something on the homepage and...
+            User is then taken to the Shop landing page listing all catefories e.g. Rugby balls, Apparel,
+            Equipment etc.,
+            User should click on a category e.g. Rugby balls
+            User sees all rugby balls
+            User clicks on one product and is taken to a product detail page</p>
+            <h4>Karakter: A</h4>
+            <a href="">Shadowball</a>
+    </div>
+</div>
+
+<div class="portfolio slide">
+    <img src="./portfolio-img/exploreleka-image.jpg">
+    <div class="portfolio-text">
+        <h3>Explore Leka</h3>
+        <h6>Turist side</h6>
+        <p>Jeg fikk ett oppdrag om å lage logo og nettside for ett firma som heter Explore Leka. De ønsket en nettside for å vise den fantastiske naturen som er på Leka, og tilby guidet tur. Siden er fortsatt under konstruering for engelsk og tysk, men norsk verson er ferdig og lansert.</p>
+            <a href="">Explore Leka</a>
+    </div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+  </div>
+
+  <div class="flex-contact-info">
+    <div class="contact-homepage">
+        <a>Email: camilla.reppen88@gmail.com</a>
+        <a>Telefon: 46748737</a>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="mailto:camilla.reppen88@gmail.com">Kontakt meg</a>
+        <a class="cv-btn" href="">Last ned cv</a>
+    </div>
+</div>
+
+<script src="main.js"></script>
+<script src="./slidshow.js"></script>
+</body>
+</html>
